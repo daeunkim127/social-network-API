@@ -60,8 +60,9 @@ const thoughtController = {
         if (!thoughtData) {
           res.status(404).json({ message: "No thought with this ID" });
           return;
-        }
-        res.json(thoughtData);
+        }else{
+          console.log(thoughtData)
+        return res.json(thoughtData);}
       })
       .catch((err) => res.status(500).json(err));
   },
